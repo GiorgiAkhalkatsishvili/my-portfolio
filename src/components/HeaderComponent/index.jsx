@@ -72,13 +72,18 @@ const HeaderComponent = ({ scrollRef }) => {
               </svg>
             </div>
             {sidebar && (
-              <div className="sidebar-list">
+              <div className={`sidebar-list ${sidebar ? 'open' : ''}`}>
                 <ul>
                   <li>Home</li>
                   <li>About me</li>
                   <li>Services</li>
                   <li>My work</li>
                   <li>Testimonials</li>
+                  <div className="sidebar-moon">
+                   <p>Dark mode:</p>
+                    <img src={moonSvg} alt="moon" />
+                  </div>
+                  <button onClick={scrollToSection}>Connect <img src={arrowSvg} alt="arrow" /></button>
                 </ul>
                 <div className="sidebar-closing-svg">
                   <div onClick={closeSidebar} className="closing-sidebar-section">
@@ -92,7 +97,7 @@ const HeaderComponent = ({ scrollRef }) => {
           </div>
         </div>
       </div>
-      {sidebar && <div className={`dark-overlay ${sidebar ? 'active' : ''}`} onClick={activateSidebar}></div>}
+      {sidebar && <div className={`dark-overlay ${sidebar ? 'open' : ''}`} onClick={activateSidebar}></div>}
     </div>
   );
 };

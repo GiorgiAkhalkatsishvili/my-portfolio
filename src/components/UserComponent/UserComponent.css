@@ -101,3 +101,30 @@ width: 16px;
     padding-right: 10px;
   }
 }
+
+@media only screen and (max-width: 400px){
+  .userComponent .user-inner .user-heading p {
+      font-size: 24px;
+    }
+
+  .userComponent .user-inner .main-info-heading h1{
+font-size: 45px;
+line-height: 50px;
+padding-left: 10px;
+padding-right: 10px;
+  }
+
+  .userComponent .main-info-text p{
+    font-size: 16px;
+  }
+
+.user-profile-texts .main-buttons .btnOne button{
+  padding: 20px 12px;
+  font-size: 16px;
+}
+
+.user-profile-texts .main-buttons .btnTwo button{
+  padding: 20px 35px;
+  font-size: 16px;
+}
+}

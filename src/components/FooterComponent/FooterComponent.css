@@ -85,13 +85,14 @@ color: #626262;
     display: flex;
     justify-content: center;
     margin-top: 10px;
+    gap: 20px;
   }
   
   .footer-inner .final-texts .final-paragraph p{
-    font-size: 15px;
+    font-size: 14px;
   }
 
   .footerComponent .footer-inner .list ul li{
-    font-size: 15px;
+    font-size: 14px;
   }
 }

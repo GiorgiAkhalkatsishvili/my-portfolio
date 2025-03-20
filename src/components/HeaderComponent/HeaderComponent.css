@@ -1,16 +1,14 @@
-
-
-.headerComponent .header-inner{
-align-items: center;
-padding: 20px 100px 0 120px;
-position: fixed;
-top: 0;
-display: flex;
+.headerComponent .header-inner {
+  align-items: center;
+  padding: 20px 100px 0 120px;
+  position: fixed;
+  top: 0;
+  display: flex;
   justify-content: space-between;
   width: 100%;
 }
 
-.headerComponent .main-background-img{
+.headerComponent .main-background-img {
   position: fixed;
   top: 0;
   right: 0;
@@ -19,7 +17,7 @@ display: flex;
   width: 100%;
 }
 
-.headerComponent .active-scroll{
+.headerComponent .active-scroll {
   background-color: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(10px);
   opacity: 50;
@@ -27,45 +25,45 @@ display: flex;
   padding-bottom: 15px;
 }
 
-.header-inner .user-name h1{
+.header-inner .user-name h1 {
   font-size: 45px;
   font-weight: 600;
 }
 
-.header-inner .user-name span{
+.header-inner .user-name span {
   color: #EC1552;
 }
 
-.header-inner .nav-links-list{
+.header-inner .nav-links-list {
   border: solid 1px #fff;
   background-color: #fff;
   padding: 20px 40px 20px 40px;
   border-radius: 100px;
 }
 
-.header-inner .nav-links-list ul{
+.header-inner .nav-links-list ul {
   display: flex;
   gap: 60px;
 }
 
-.header-inner .nav-links-list ul li{
+.header-inner .nav-links-list ul li {
   list-style-type: none;
   font-size: 20px;
   cursor: pointer;
 }
 
-.header-inner .header-svg-btn{
+.header-inner .header-svg-btn {
   display: flex;
   gap: 35px;
   align-items: center;
 }
 
-.header-inner .header-svg-btn .header-svg img{
+.header-inner .header-svg-btn .header-svg img {
   width: 28px;
   cursor: pointer;
 }
 
-.header-inner .header-svg-btn .header-btn button{
+.header-inner .header-svg-btn .header-btn button {
   display: flex;
   gap: 15px;
   padding: 20px 40px;
@@ -77,20 +75,38 @@ display: flex;
   transition: .4s ease;
 }
 
-.header-inner .header-svg-btn .header-btn button:hover{
+.header-inner .sidebar button {
+  display: flex;
+  gap: 15px;
+  padding: 12px 15px;
+  font-size: 14px;
+  border-radius: 100px;
+  border: solid 1px #A7A7A7;
+  background-color: #fff;
+  cursor: pointer;
+  transition: .4s ease;
+}
+
+.header-inner .sidebar button:hover {
   background-color: #000;
   color: #fff;
 }
 
-.header-inner .header-svg-btn .header-btn button img{
+.header-inner .sidebar button img {
+  width: 9px;
+}
+
+.header-inner .header-svg-btn .header-btn button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.header-inner .header-svg-btn .header-btn button img {
   width: 11px;
 }
 
-.header-inner .sidebar{
+.header-inner .sidebar {
   display: none;
-  transition: right 1s ease;
-  right: -100%;
-  z-index: 100;
 }
 
 .header-inner .sidebar .sidebar-svg svg {
@@ -99,21 +115,20 @@ display: flex;
 }
 
 
-.header-inner .sidebar.open {
-  top: 0;
-  transition: right 1s ease;
-}
-
-.header-inner .sidebar .sidebar-list{
-position: absolute;
+.header-inner .sidebar .sidebar-list {
+  position: absolute;
   height: 100vh;
   top: 0;
-  right: 0;
   bottom: 0;
   background-color: #fff;
-   width: 271px;
-    z-index: 100;
-  transition: transform 0.4s ease;
+  width: 271px;
+  right: -271px;
+  transition: right 1s ease;
+  z-index: 100;
+}
+
+.header-inner .sidebar-list.open {
+  right: 0;
 }
 
 .header-inner .sidebar .sidebar-list ul {
@@ -131,6 +146,16 @@ position: absolute;
   cursor: pointer;
 }
 
+.header-inner .sidebar-moon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-inner .sidebar-moon p {
+  font-size: 22px;
+}
+
 .dark-overlay {
   position: fixed;
   top: 0;
@@ -142,41 +167,41 @@ position: absolute;
   z-index: 10;
 }
 
-.header-inner .closing-background{
+.header-inner .closing-background {
   position: absolute;
-    bottom: 0;
+  bottom: 0;
   border: solid 1px rgba(18, 18, 18, .5);
-background-color: rgba(18, 18, 18, .5);
-width: 50px;
-height: 50px;
-display: flex;
-justify-content: center;
-align-items: center;
+  background-color: rgba(18, 18, 18, .5);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
-.header-inner .sidebar-closing-svg{
-background-color: #757575;
-width: 100%;
-display: flex;
+.header-inner .sidebar-closing-svg {
+  background-color: #757575;
+  width: 100%;
+  display: flex;
   justify-content: flex-end;
   position: absolute;
   bottom: 0;
   height: 50px;
 }
 
-.header-inner .closing-sidebar-section{
+.header-inner .closing-sidebar-section {
   background-color: rgba(18, 18, 18, .2);
   padding-left: 10px;
   padding-right: 10px;
   cursor: pointer;
 }
 
-.header-inner .closing-sidebar-section:hover{
+.header-inner .closing-sidebar-section:hover {
   background-color: rgba(18, 18, 18, .5);
 }
 
-.header-inner .sidebar-closing-svg svg{
+.header-inner .sidebar-closing-svg svg {
   width: 18px;
   height: 100%;
   color: #ffff;
@@ -186,36 +211,50 @@ display: flex;
   margin-bottom: 5px;
 }
 
-@media only screen and (max-width: 1290px){
-.headerComponent .header-inner{
-  padding: 20px 20px 10px 20px;
+@media only screen and (max-width: 1290px) {
+  .headerComponent .header-inner {
+    padding: 20px 20px 10px 20px;
+  }
+
+  .header-inner .user-name h1 {
+    font-size: 35px;
+  }
+
+  .header-inner .nav-links-list ul li {
+    font-size: 18px;
+  }
 }
 
-.header-inner .user-name h1{
-  font-size: 35px;
+@media only screen and (max-width: 1190px) {
+  .header-inner .nav-links-list {
+    display: none;
+  }
+
+  .header-inner .sidebar {
+    display: block;
+  }
+
+  .headerComponent .header-svg {
+    position: relative;
+    left: 20px;
+  }
+
+  .header-inner .header-svg-btn .header-btn button {
+    padding: 16px 25px;
+    font-size: 16px;
+  }
+
+  .header-inner .sidebar button img {
+    width: 9px;
+  }
 }
 
-.header-inner .nav-links-list ul li{
-  font-size: 18px;
-}
-}
+@media only screen and (max-width: 400px) {
+  .header-inner .header-svg-btn .header-btn button {
+    display: none;
+  }
 
-@media only screen and (max-width: 1190px){
-.header-inner .nav-links-list{
-  display: none;
-}
-
-.header-inner .sidebar{
-  display: block;
-}
-
-.headerComponent .header-svg{
-position: relative;
-left: 20px;
-}
-
-.header-inner .header-svg-btn .header-btn button{
-  padding: 16px 25px;
-  font-size: 16px;
-}
+  .headerComponent .header-svg {
+    display: none;
+  }
 }
