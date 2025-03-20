@@ -1,0 +1,112 @@
+
+.servicesComponent{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 227px;
+}
+
+.servicesComponent .services-inner .main-headings{
+  text-align: center;
+}
+
+.services-inner .offers-heading p{
+  font-size: 24px;
+  color: #242424;
+  font-weight: 400;
+  line-height: 100%;
+}
+
+.services-inner .main-headings h1{
+  color: #242424;
+  font-size: 60px;
+  line-height: 100%;
+}
+
+.services-inner .main-headings .paragraph{
+  margin-top: 25px;
+  max-width: 720px;
+  margin: auto;
+}
+
+.services-inner .main-headings .paragraph p{
+  color: #565656;
+  font-size: 20px;
+  line-height: 40px;
+  margin-top: 25px;
+  max-width: 720px;
+}
+
+.services-inner .main-skills{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 27px;
+  margin-top: 54px;
+}
+
+.services-inner .main-skills .skillOne{
+  border: solid 2px #EFEFEF;
+  border-radius: 8px;
+  max-width: 300px;
+  width: 100%;
+ height: auto;
+ transition: .4s ease;
+ cursor: pointer;
+}
+
+.services-inner .main-skills .skillOne:hover{
+  background-color: #FCF4FF;
+}
+
+.services-inner .main-skills .skillOne img{
+  width: 47px;
+  background-color: #fff;
+  margin: 20px 0 28px 28px;
+}
+
+.services-inner .main-skills .skillOne h3{
+  color: #282828;
+  font-size: 26px;
+  line-height: 100%;
+  margin-left: 28px;
+}
+
+.services-inner .main-skills .skillOne p{
+  margin-left: 28px;
+  margin-top: 17px;
+  margin-right: 10px;
+  padding-bottom: 15px;
+}
+
+@media only screen and (max-width: 1290px){
+  .servicesComponent{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media only screen and (max-width: 1190px){
+  .services-inner .main-skills{
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .servicesComponent{
+   padding-right: 0;
+  }
+}
+
+@media only screen and (max-width: 700px){
+.services-inner .main-skills {
+    grid-template-columns: 1fr;
+    place-items: center;
+    padding-right: 20px;
+  }
+  .services-inner .main-skills .skillOne{
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .servicesComponent .main-headings{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}

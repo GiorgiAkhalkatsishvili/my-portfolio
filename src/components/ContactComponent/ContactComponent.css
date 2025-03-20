@@ -1,0 +1,152 @@
+.contactComponent{
+  background-image: url('../../assets/bottomBackgroundImg.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 90% auto;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 160px;
+}
+
+.contactComponent .main-background-img{
+    top: 0;
+    right: 0;
+    transform: translateY(-20%);
+    z-index: -10;
+    width: 100%;
+}
+
+
+.contactComponent .contact-inner .main-texts{
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.contactComponent .contact-inner .main-texts h2{
+  line-height: 100%;
+  font-weight: 400;
+}
+
+.contactComponent .contact-inner .main-texts h1{
+  font-weight: 400;
+  color: #242424;
+  font-size: 60px;
+}
+
+.contactComponent .contact-inner .main-texts p{
+  font-weight: 400;
+  color: #565656;
+  font-size: 20px;
+  line-height: 40px;
+  max-width: 576px;
+  width: 100%;
+}
+
+.contact-inner .main-contact-inputs .two-inputs{
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 45px;
+}
+
+.contact-inner .main-contact-inputs .inpThree{
+  display: flex;
+  justify-content: center;
+}
+
+.contact-inner .main-contact-inputs .inpOne{
+  max-width: 350px;
+  width: 100%;
+}
+
+.contact-inner .main-contact-inputs .inpTwo{
+  max-width: 350px;
+  width: 100%;
+}
+
+.contact-inner .main-contact-inputs .inpOne input{
+  width: 100%;
+  height: 64px;
+  padding-left: 15px;
+  border-radius: 8px;
+    border: solid 1px #B3B3B3;
+    outline: none;
+    font-size: 18px;
+}
+
+.contact-inner .main-contact-inputs .inpTwo input{
+  width: 100%;
+  height: 64px;
+  padding-left: 15px;
+   border-radius: 8px;
+    border: solid 1px #B3B3B3;
+    outline: none;
+    font-size: 18px;
+}
+
+.contact-inner .main-contact-inputs .inpThree {
+  margin-bottom: 50px;
+}
+
+.contact-inner .main-contact-inputs .inpThree input{
+width: 100%;
+height: 215px;
+display: flex;
+  justify-content: start;
+  text-align: start;
+  padding-bottom: 150px;
+  padding-left: 15px;
+  border-radius: 8px;
+  border: solid 1px #B3B3B3;
+  outline: none;
+  font-size: 18px;
+}
+
+.contact-inner .main-contact-inputs .inpThree input::placeholder{
+  font-size: 18px;
+    color: #B3B3B3;
+    text-align: start;
+}
+
+.contact-inner .main-contact-inputs .inpTwo input::placeholder{
+font-size: 18px;
+  color: #B3B3B3;
+}
+
+.contact-inner .main-contact-inputs .inpOne input::placeholder{
+  font-size: 18px;
+  color: #B3B3B3;
+}
+
+.contact-inner .input-form-btn{
+  display: flex;
+  justify-content: center;
+}
+
+.contact-inner .input-form-btn button{
+font-size: 18px;
+color: #fff;
+background-color: #202020;
+border-radius: 50px;
+display: flex;
+gap: 7px;
+padding: 20px 46px;
+cursor: pointer;
+transition: .4s ease;
+}
+
+.contact-inner .input-form-btn button svg{
+  width: 15px;
+}
+
+.contact-inner .input-form-btn button:hover{
+  background-color: #fff;
+  color: #000;
+}
+
+@media only screen and (max-width: 700px){
+  .contactComponent{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}

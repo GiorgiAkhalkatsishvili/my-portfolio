@@ -1,0 +1,97 @@
+
+.footerComponent{
+  margin-bottom: 30px;
+}
+
+.footerComponent .footer-inner .user-name h1 {
+  font-size: 45px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+}
+
+.footerComponent .footer-inner .user-name span {
+  color: #EC1552;
+}
+
+.footer-inner .email-address{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 60px;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.footer-inner .email-address p{
+ line-height: 100%;
+ font-size: 18px;
+ color: #797979;
+}
+
+.footer-inner .email-address img{
+  width: 31px;
+}
+
+.footerComponent hr{
+  border: solid 1px #969696;
+  max-width: 1280px;
+  width: 100%;
+  margin: auto;
+  margin-bottom: 26px;
+}
+
+.footer-inner .final-texts{
+  display: flex;
+  align-items: center;
+  max-width: 1280px;
+  width: 100%;
+  margin: auto;
+  justify-content: space-between;
+}
+
+.footer-inner .final-texts .final-paragraph p{
+font-size: 18px;
+line-height: 100%;
+color: #626262;
+}
+
+.footer-inner .final-texts .list ul{
+  display: flex;
+  gap: 55px;
+}
+
+.footer-inner .final-texts .list ul li{
+  font-size: 18px;
+  color: #626262;
+  list-style-type: none;
+  line-height: 30px;
+}
+
+@media only screen and (max-width: 1290px){
+  .footerComponent{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media only screen and (max-width: 700px){
+  .footer-inner .final-texts{
+    display: block;
+    text-align: center;
+  }
+
+  .footerComponent .footer-inner .list ul{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .footer-inner .final-texts .final-paragraph p{
+    font-size: 15px;
+  }
+
+  .footerComponent .footer-inner .list ul li{
+    font-size: 15px;
+  }
+}
