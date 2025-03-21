@@ -3,23 +3,44 @@ import './ServicesComponent.css'
 import htmlImg from '../../assets/html.png'
 import cssImg from '../../assets/css.jpg'
 import javascriptImg from '../../assets/js.png'
-import reactImg from '../../assets/react.webp'
+import reactImg from '../../assets/react.webp';
+import { motion } from 'motion/react';
 
 const ServicesComponent = forwardRef((props, ref) => {
   const importRef = useRef();
   return (
-    <div ref={ref} className='servicesComponent'>
+    <motion.div
+      initial={{opacity: 0}}
+      whileInView={{ opacity: 1}}
+      transition={{ duration: 1}}
+      ref={ref} className='servicesComponent'>
       <div className="services-inner">
         <div className="main-headings">
           <div className="offers-heading">
-            <p>What i offer</p>
+            <motion.p
+            initial={{y: -20, opacity: 0}}
+      whileInView={{y: 0, opacity: 1}}
+      transition={{delay: 0.3, duration: 0.5}}
+            >What i offer</motion.p>
           </div>
-          <h1>My skills</h1>
+          <motion.h1
+             initial={{y: -20, opacity: 0}}
+      whileInView={{y: 0, opacity: 1}}
+      transition={{delay: 0.5, duration: 0.5}}
+          >My skills</motion.h1>
           <div className="paragraph">
-            <p>I am a frontend developer from Georgia, Telavi, with 1+ years of experience in modern front-end development.</p>
+            <motion.p
+        initial={{ opacity: 0}}
+      whileInView={{ opacity: 1}}
+      transition={{delay: 0.7, duration: 0.5}}
+            >I am a frontend developer from Georgia, Telavi, with 1+ years of experience in modern front-end development.</motion.p>
           </div>
         </div>
-        <div className="main-skills">
+        <motion.div
+             initial={{ opacity: 0}}
+      whileInView={{ opacity: 1}}
+      transition={{delay: 0.9, duration: 0.6}}
+          className="main-skills">
           <div className="skillOne">
             <img src={htmlImg} alt="" />
             <h3>HTML</h3>
@@ -40,9 +61,9 @@ const ServicesComponent = forwardRef((props, ref) => {
             <h3>REACT</h3>
             <p>I have practical knowledge of React for building component-based, scalable web applications. I am proficient with hooks, state management, and working with React Router for efficient navigation, ensuring smooth and efficient performance across web applications.</p>
           </div>
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 });
 

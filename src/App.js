@@ -11,14 +11,17 @@ import UserComponent from './components/UserComponent';
 function App() {
   const sectionRef = useRef(null);
   const sectionRefTwo = useRef(null);
+  const aboutRef = useRef(null);
+  const servicesRef = useRef(null);
+  const myWorkRef = useRef(null);
 
   return (
     <div className="App">
-      <HeaderComponent scrollRef={sectionRef}/>
+      <HeaderComponent scrollRef={sectionRef} scrollAbout={aboutRef} scrollServices={servicesRef} scrollRefHeader={sectionRefTwo} scrollToWorks = {myWorkRef}/>
       <UserComponent scrollRef={sectionRefTwo} connectRef={sectionRef}/>
-      <AboutComponent />
+      <AboutComponent ref={aboutRef}/>
       <ServicesComponent ref={sectionRefTwo}/>
-      <ProjectsComponent refTwo={sectionRefTwo}/>
+      <ProjectsComponent ref={myWorkRef}/>
       <ContactComponent ref={sectionRef}/>
       <FooterComponent/>
     </div>

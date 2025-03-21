@@ -4,7 +4,7 @@ import moonSvg from '../../assets/Vector.svg';
 import arrowSvg from '../../assets/arrow.svg';
 import backgroundImg from '../../assets/backgroundImg.png';
 
-const HeaderComponent = ({ scrollRef }) => {
+const HeaderComponent = ({ scrollRef, scrollAbout, scrollRefHeader, scrollToWorks }) => {
   const scrollToSection = () => {
     if (scrollRef.current) {
       scrollRef.current.scrollIntoView({ behavior: "smooth" });
@@ -12,6 +12,35 @@ const HeaderComponent = ({ scrollRef }) => {
       console.error("scrollRef is null");
     }
   };
+  const aboutScroll = () => {
+    if (scrollAbout.current) {
+      scrollAbout.current.scrollIntoView({ behavior: "smooth" });
+    } else {
+      console.error("scrollRef is null");
+    }
+  };
+  const ScrollToWork = () => {
+    if (scrollToWorks.current) {
+      scrollToWorks.current.scrollIntoView({ behavior: "smooth" });
+    } else {
+      console.error("scrollRef is null");
+    }
+  };
+ 
+  const scrollToServicesSection = () => {
+    if (scrollRefHeader.current) {
+      scrollRefHeader.current.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      console.error('scrollRef is null');
+    }
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({
+    top: 0,   
+    behavior: 'smooth' 
+  });
+  }
 
 
   const [sidebar, setSidebar] = useState(false);
@@ -52,16 +81,16 @@ const HeaderComponent = ({ scrollRef }) => {
         </div>
         <div className="nav-links-list">
           <ul>
-            <li>Home</li>
-            <li>About me</li>
-            <li>Services</li>
-            <li>My work</li>
+            <li onClick={scrollToTop}>Home</li>
+            <li onClick={aboutScroll}>About me</li>
+            <li onClick={scrollToServicesSection}>Services</li>
+            <li onClick={ScrollToWork}>My work</li>
             <li>Testimonials</li>
           </ul>
         </div>
         <div className="header-svg-btn">
           <div className="header-svg">
-            <img src={moonSvg} alt="moon" />
+            {/* <img src={moonSvg} alt="moon" /> */}
           </div>
           <div className="header-btn">
             <button onClick={scrollToSection}>Connect <img src={arrowSvg} alt="arrow" /></button>
@@ -75,14 +104,14 @@ const HeaderComponent = ({ scrollRef }) => {
             {sidebar && (
               <div className='sidebar-list open'>
                 <ul>
-                  <li>Home</li>
-                  <li>About me</li>
-                  <li>Services</li>
-                  <li>My work</li>
+                  <li onClick={scrollToTop}>Home</li>
+                  <li onClick={aboutScroll}>About me</li>
+                  <li onClick={scrollToServicesSection}>Services</li>
+                  <li onClick={ScrollToWork}>My work</li>
                   <li>Testimonials</li>
                   <div className="sidebar-moon">
-                    <p>Dark mode:</p>
-                    <img src={moonSvg} alt="moon" />
+                    {/* <p>Dark mode:</p>
+                    <img src={moonSvg} alt="moon" /> */}
                   </div>
                   <button onClick={scrollToSection}>Connect <img src={arrowSvg} alt="arrow" /></button>
                 </ul>

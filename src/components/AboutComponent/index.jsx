@@ -1,29 +1,54 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import './AboutComponent.css'
 import profileImg from '../../assets/me.jpg';
 import vsCodeImg from '../../assets/vsCode.png';
 import figamImg from '../../assets/figma.png';
 import gitImg from '../../assets/git.png';
-import githubImg from '../../assets/github.png'
+import githubImg from '../../assets/github.png';
+import { motion } from 'motion/react';
 
-const AboutComponent = () => {
+const AboutComponent = forwardRef((props, scrollAbout) => {
   return (
-    <div className='aboutComponent'>
+    <div ref={scrollAbout} className='aboutComponent'>
       <div className="about-inner">
         <div className="main-texts">
-          <h2>Introduction</h2>
-          <h1>About me</h1>
+          <motion.h2
+          initial={{opacity: 0, y: -20}}
+      whileInView={{ opacity: 1, y: 0}}
+      transition={{ duration: 0.5, delay: 0.3}}
+          >Introduction</motion.h2>
+          <motion.h1
+          initial={{opacity: 0, y: -20}}
+      whileInView={{ opacity: 1, y: 0}}
+      transition={{ duration: 0.5, delay: 0.5}}
+          >About me</motion.h1>
         </div>
-        <div className="main-image-texts">
-          <div className="main-about-image">
+        <motion.div
+        initial={{opacity: 0}}
+      whileInView={{ opacity: 1}}
+      transition={{ duration: 0.8}}
+          className="main-image-texts">
+          <div
+          initial={{opacity: 0, scale: 0.9}}
+      whileInView={{ opacity: 1, scale: 1}}
+      transition={{ duration: 0.6}}
+            className="main-about-image">
           <img src={profileImg} alt="" />
         </div>
           <div className="main-paragraph-skills">
-            <div className="main-about-paragraph">
+            <div
+            initial={{opacity: 0}}
+      whileInView={{ opacity: 1}}
+      transition={{ duration: 0.6, delay: 0.8}}
+            className="main-about-paragraph">
         <p>My passion for coding, combined with my ability to adapt and learn quickly, ensures I can effectively contribute to a development team. Fluent in Georgian, second language - English.
 </p>
             </div>
-            <div className="my-skills">
+            <motion.div
+            initial={{opacity: 0}}
+      whileInView={{ opacity: 1}}
+      transition={{ duration: 0.3, delay: 0.5}}
+              className="my-skills">
               <div className="skillOne">
                 <div className="skill-svg">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill='#49516B' d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z" /></svg>
@@ -57,12 +82,17 @@ const AboutComponent = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div >
             <div className="tools-container">
               <div className="heading">
-                <h3>Tools i use</h3>
+                <motion.h3
+                initial={{y: 20, opacity: 0}}
+      whileInView={{ y: 0, opacity: 1}}
+      transition={{delay: 1.3, duration: 0.5}}
+                >Tools i use</motion.h3>
               </div>
-              <div className="tools-list">
+              <motion.div
+                className="tools-list">
                 <div className="vsCode">
                   <img src={vsCodeImg} alt="" />
                 </div>
@@ -75,13 +105,13 @@ const AboutComponent = () => {
                 <div className="github">
                   <img src={githubImg} alt="" />
                 </div>
-              </div>
+              </motion.div>
             </div>
         </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   )
-}
+})
 
 export default AboutComponent
