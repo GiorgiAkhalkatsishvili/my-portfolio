@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './HeaderComponent.css';
 import moonSvg from '../../assets/Vector.svg';
 import arrowSvg from '../../assets/arrow.svg';
@@ -12,6 +12,7 @@ const HeaderComponent = ({ scrollRef }) => {
       console.error("scrollRef is null");
     }
   };
+
 
   const [sidebar, setSidebar] = useState(false);
   const [isScroll, setIsScroll] = useState(false);
@@ -72,7 +73,7 @@ const HeaderComponent = ({ scrollRef }) => {
               </svg>
             </div>
             {sidebar && (
-              <div className={`sidebar-list ${sidebar ? 'open' : ''}`}>
+              <div className='sidebar-list open'>
                 <ul>
                   <li>Home</li>
                   <li>About me</li>
@@ -80,7 +81,7 @@ const HeaderComponent = ({ scrollRef }) => {
                   <li>My work</li>
                   <li>Testimonials</li>
                   <div className="sidebar-moon">
-                   <p>Dark mode:</p>
+                    <p>Dark mode:</p>
                     <img src={moonSvg} alt="moon" />
                   </div>
                   <button onClick={scrollToSection}>Connect <img src={arrowSvg} alt="arrow" /></button>
@@ -97,7 +98,7 @@ const HeaderComponent = ({ scrollRef }) => {
           </div>
         </div>
       </div>
-      {sidebar && <div className={`dark-overlay ${sidebar ? 'open' : ''}`} onClick={activateSidebar}></div>}
+      {sidebar && <div className={`dark-overlay ${sidebar ? 'open' : ''}`} onClick={closeSidebar}></div>}
     </div>
   );
 };

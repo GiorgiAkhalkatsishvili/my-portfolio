@@ -107,6 +107,7 @@
 
 .header-inner .sidebar {
   display: none;
+  z-index: 200;
 }
 
 .header-inner .sidebar .sidebar-svg svg {
@@ -122,13 +123,14 @@
   bottom: 0;
   background-color: #fff;
   width: 271px;
-  right: -271px;
-  transition: right 1s ease;
-  z-index: 100;
+  right: -100%;
+  transition: right 0.5s ease-out;
+  z-index: 200;
 }
 
-.header-inner .sidebar-list.open {
+.header-inner .sidebar .sidebar-list.open {
   right: 0;
+z-index: 200;
 }
 
 .header-inner .sidebar .sidebar-list ul {
@@ -160,11 +162,11 @@
   position: fixed;
   top: 0;
   left: 0;
-  right: 270.1px;
+  right: 271px;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
-  z-index: 10;
+  z-index: 1;
 }
 
 .header-inner .closing-background {
@@ -237,11 +239,13 @@
   .headerComponent .header-svg {
     position: relative;
     left: 20px;
+    display: none;
   }
 
   .header-inner .header-svg-btn .header-btn button {
     padding: 16px 25px;
     font-size: 16px;
+    display: none;
   }
 
   .header-inner .sidebar button img {

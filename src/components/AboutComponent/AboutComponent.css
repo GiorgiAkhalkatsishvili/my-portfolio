@@ -157,6 +157,8 @@ cursor: pointer;
   .about-inner .my-skills{
     display: grid;
     grid-template-columns: 1fr;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   .about-inner .my-skills .skillOne{
