@@ -129,6 +129,7 @@ color: #fff;
 background-color: #202020;
 border-radius: 50px;
 display: flex;
+align-items: center;
 gap: 7px;
 padding: 20px 46px;
 cursor: pointer;
