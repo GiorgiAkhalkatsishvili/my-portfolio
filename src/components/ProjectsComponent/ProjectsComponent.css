@@ -111,6 +111,7 @@ display: flex;
 
 .projects-inner .projects-btn button{
 display: flex;
+align-items: center;
 gap: 10px;
 color: #6F6F6F;
 font-size: 18px;
@@ -120,6 +121,7 @@ border-radius: 50px;
 background-color: #fff;
 transition: .4s ease;
 cursor: pointer;
+outline: none;
 }
 
 .projects-inner .projects-btn button svg{
