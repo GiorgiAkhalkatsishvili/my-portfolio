@@ -33,7 +33,7 @@ const ServicesComponent = forwardRef((props, ref) => {
         initial={{ opacity: 0}}
       whileInView={{ opacity: 1}}
       transition={{delay: 0.7, duration: 0.5}}
-            >I am a frontend developer from Georgia, Telavi, with 1+ years of experience in modern front-end development.</motion.p>
+            >Below are the langauges i master in front-end development.</motion.p>
           </div>
         </div>
         <motion.div

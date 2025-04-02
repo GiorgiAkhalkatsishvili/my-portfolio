@@ -50,7 +50,6 @@
   width: 100%;
  height: auto;
  transition: .4s ease;
- cursor: pointer;
 }
 
 .services-inner .main-skills .skillOne:hover{

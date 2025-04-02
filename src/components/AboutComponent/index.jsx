@@ -88,7 +88,7 @@ const AboutComponent = forwardRef((props, scrollAbout) => {
                 <motion.h3
                 initial={{y: 20, opacity: 0}}
       whileInView={{ y: 0, opacity: 1}}
-      transition={{delay: 1.3, duration: 0.5}}
+      transition={{delay: 0.6, duration: 0.5}}
                 >Tools i use</motion.h3>
               </div>
               <motion.div

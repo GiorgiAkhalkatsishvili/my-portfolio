@@ -100,6 +100,27 @@ width: 16px;
     padding-left: 10px;
     padding-right: 10px;
   }
+
+    .user-profile-texts .main-buttons .btnOne button {
+      padding: 15px 25px;
+      font-size: 16px;
+      gap: 10px;
+      align-items: center;
+    }
+  
+    .user-profile-texts .main-buttons .btnOne button svg {
+      width: 11px;
+    }
+  
+    .user-profile-texts .main-buttons .btnTwo button svg {
+      width: 11px;
+    }
+  
+    .user-profile-texts .main-buttons .btnTwo button {
+      padding: 15px 40px;
+      font-size: 16px;
+      gap: 10px;
+    }
 }
 
 @media only screen and (max-width: 400px){
@@ -119,12 +140,44 @@ padding-right: 10px;
   }
 
 .user-profile-texts .main-buttons .btnOne button{
-  padding: 20px 12px;
-  font-size: 16px;
+  padding: 20px 20px;
+  font-size: 10px;
+  gap: 10px;
+}
+
+.user-profile-texts .main-buttons .btnOne button svg{
+  width: 11px;
+}
+
+.user-profile-texts .main-buttons .btnTwo button svg{
+  width: 11px;
 }
 
 .user-profile-texts .main-buttons .btnTwo button{
-  padding: 20px 35px;
-  font-size: 16px;
+  padding: 20px 30px;
+  font-size: 10px;
+  gap: 10px;
 }
+}
+
+@media only screen and (max-width: 350px){
+  .user-profile-texts .main-buttons .btnOne button {
+      padding: 20px 20px;
+      font-size: 10px;
+      gap: 10px;
+    }
+  
+    .user-profile-texts .main-buttons .btnOne button svg {
+      width: 11px;
+    }
+  
+    .user-profile-texts .main-buttons .btnTwo button svg {
+      width: 11px;
+    }
+  
+    .user-profile-texts .main-buttons .btnTwo button {
+      padding: 20px 30px;
+      font-size: 10px;
+      gap: 10px;
+    }
 }

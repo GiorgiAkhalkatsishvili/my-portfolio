@@ -20,8 +20,6 @@ const FooterComponent = () => {
           </div>
           <div className="list">
             <ul>
-              <li>Terms of Services</li>
-              <li>Privacy Policy</li>
               <li>Connect with me</li>
             </ul>
           </div>

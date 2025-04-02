@@ -54,7 +54,6 @@ border-radius: 30px;
   width: 200px;
   height: 195px;
   transition: .4s ease;
-  cursor: pointer;
 }
 
 .about-inner .my-skills .skillOne:hover{
@@ -110,7 +109,6 @@ width: 75px;
 height: 75px;
 border-radius: 10px;
 transition: .4s ease;
-cursor: pointer;
 }
 
 .about-inner .tools-list .vsCode:hover{

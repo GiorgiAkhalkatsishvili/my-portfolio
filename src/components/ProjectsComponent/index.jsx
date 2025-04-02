@@ -8,7 +8,7 @@ import additionalPhoto from '../../assets/photo.png';
 import { motion } from 'motion/react';
 
 const ProjectsComponent = forwardRef((props, myWorkRef) => {
-  const myRef = useRef()
+  const myRef = useRef();
   return (
     <motion.div
       ref={myWorkRef}  // This is where the ref is forwarded
@@ -24,7 +24,7 @@ const ProjectsComponent = forwardRef((props, myWorkRef) => {
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.5 }}
           >
-            My portfolio
+            My projects
           </motion.h2>
           <motion.h1
             initial={{ y: -20, opacity: 0 }}
@@ -99,7 +99,7 @@ const ProjectsComponent = forwardRef((props, myWorkRef) => {
           className="projects-btn"
         >
           <a target="_blank" href="https://github.com/GiorgiAkhalkatsishvili">
-            <button>My Github <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#6F6F6F" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" /></svg></button>
+            <button>Github <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#6F6F6F" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" /></svg></button>
           </a>
         </motion.div>
       </div>
