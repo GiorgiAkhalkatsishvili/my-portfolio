@@ -6,6 +6,7 @@ import cursorSvg from '../../assets/cursor.png';
 import apiShop from '../../assets/apiShop.png';
 import additionalPhoto from '../../assets/photo.png';
 import { motion } from 'motion/react';
+import eCommerceScreenShot from '../../assets/e-commerce-screen-shot.png';
 
 const ProjectsComponent = forwardRef((props, myWorkRef) => {
   const myRef = useRef();
@@ -72,8 +73,8 @@ const ProjectsComponent = forwardRef((props, myWorkRef) => {
             </a>
           </div>
           <div className="projectOne">
-            <a target="_blank" href="https://github.com/GiorgiAkhalkatsishvili/shopWeb">
-              <img src={apiShop} alt="" />
+            <a target="_blank" href="https://new-e-commerce-sigma.vercel.app/">
+              <img src={eCommerceScreenShot} alt="" />
               <div className="project-text-icon">
                 <h2>Fashion, clean shop website</h2>
                 <div className="cursor-img">
