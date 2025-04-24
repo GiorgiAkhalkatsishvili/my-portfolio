@@ -3,7 +3,7 @@ import './ProjectsComponent.css';
 import doctorWebsite from '../../assets/doctor-web-img.png';
 import eCommerceWebsite from '../../assets/e-commerceImg.png';
 import cursorSvg from '../../assets/cursor.png';
-import apiShop from '../../assets/apiShop.png';
+import newEcommerceWeb from '../../assets/commerce-website.png'
 import additionalPhoto from '../../assets/photo.png';
 import { motion } from 'motion/react';
 import eCommerceScreenShot from '../../assets/e-commerce-screen-shot.png';
@@ -12,7 +12,7 @@ const ProjectsComponent = forwardRef((props, myWorkRef) => {
   const myRef = useRef();
   return (
     <motion.div
-      ref={myWorkRef}  // This is where the ref is forwarded
+      ref={myWorkRef} 
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
@@ -84,13 +84,15 @@ const ProjectsComponent = forwardRef((props, myWorkRef) => {
             </a>
           </div>
           <div className="projectOne">
-            <img src={additionalPhoto} alt="" />
+            <a target="_blank" href="https://modern-e-commerce-3s9w.vercel.app/">
+              <img src={newEcommerceWeb} alt="" />
             <div className="project-text-icon">
-              <h2>More projects coming soon</h2>
+              <h2>New beautiful e-commerce</h2>
               <div className="cursor-img">
                 <img src={cursorSvg} alt="" />
               </div>
             </div>
+            </a>
           </div>
         </motion.div>
         <motion.div

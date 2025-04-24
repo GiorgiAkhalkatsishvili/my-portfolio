@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './HeaderComponent.css';
-import moonSvg from '../../assets/Vector.svg';
 import arrowSvg from '../../assets/arrow.svg';
 import backgroundImg from '../../assets/backgroundImg.png';
 
