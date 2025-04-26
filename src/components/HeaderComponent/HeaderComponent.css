@@ -8,6 +8,17 @@
   width: 100%;
 }
 
+.overlay {
+   background-color: #00000080;
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+  
+}
+
 .headerComponent .main-background-img {
   position: fixed;
   top: 0;
@@ -28,6 +39,7 @@
 .header-inner .user-name h1 {
   font-size: 45px;
   font-weight: 600;
+  cursor: pointer;
 }
 
 .header-inner .user-name span {
@@ -75,6 +87,47 @@
   transition: .4s ease;
 }
 
+.header-inner .sidebar {
+  display: none;
+  z-index: 10;
+}
+
+.header-inner .sidebar button img {
+  width: 9px;
+}
+
+.header-inner .header-svg-btn .header-btn button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.header-inner .header-svg-btn .header-btn button img {
+  width: 11px;
+}
+
+.headerComponent .sidebar-menu{
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 13px 0 12px 10px #000;
+  z-index: 999;
+  padding-top: 50px;
+  max-width: 230px;
+  width: 100%;
+  max-height: 100vh;
+  height: 100vh;
+  transition-duration: 500ms;
+  z-index: 999;
+}
+
+.header-inner .sidebar .sidebar-button{
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
 .header-inner .sidebar button {
   display: flex;
   align-items: center;
@@ -93,128 +146,54 @@
   color: #fff;
 }
 
-.header-inner .sidebar button img {
-  width: 9px;
-}
-
-.header-inner .header-svg-btn .header-btn button:hover {
-  background-color: #000;
-  color: #fff;
-}
-
-.header-inner .header-svg-btn .header-btn button img {
-  width: 11px;
-}
-
-.header-inner .sidebar {
-  display: none;
-  z-index: 200;
-}
-
 .header-inner .sidebar .sidebar-svg svg {
   width: 25px;
   cursor: pointer;
 }
 
-
-.header-inner .sidebar .sidebar-list {
-  position: absolute;
-  height: 100vh;
-  top: 0;
-  bottom: 0;
-  background-color: #fff;
-  width: 271px;
-  right: -100%;
-  transition: right 0.5s ease-out;
-  z-index: 200;
+.header-inner .sidebar-list ul{
+text-align: center;
+display: flex;
+flex-direction: column;
+gap: 20px;
 }
 
-.header-inner .sidebar .sidebar-list.open {
-  right: 0;
-z-index: 200;
-}
-
-.header-inner .sidebar .sidebar-list ul {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  margin-top: 50px;
-}
-
-.header-inner .sidebar .sidebar-list ul li {
+.header-inner .sidebar-list ul li{
+color: #000;
+  cursor: pointer;
   font-size: 22px;
   list-style: none;
-  color: #000;
+}
+
+.header-inner .sidebar .sidebar-closing-button{
+background-color: #757575;
+width: 100%;
+height: 45px;
+position: absolute;
+bottom: 0;
+}
+
+.header-inner .sidebar .closing-icon {
   cursor: pointer;
+  width: 45px;
+  background-color: #12121233;
+    height: 100%;
+    position: absolute;
+      right: 0;
 }
 
-.header-inner .sidebar-moon {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+.header-inner .sidebar .closing-icon:hover{
+  background-color: #11101033;
 }
 
-.header-inner .sidebar-moon p {
-  font-size: 22px;
-}
-
-.dark-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 271px;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  z-index: 1;
-}
-
-.header-inner .closing-background {
+.header-inner .sidebar .closing-icon svg{
+margin-right: 11px;
+margin-top: 7px;
+  cursor: pointer;
+  width: 23px;
   position: absolute;
-  bottom: 0;
-  border: solid 1px rgba(18, 18, 18, .5);
-  background-color: rgba(18, 18, 18, .5);
-  width: 50px;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  right: 0;
 }
-
-
-.header-inner .sidebar-closing-svg {
-  background-color: #757575;
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  position: absolute;
-  bottom: 0px;
-  min-height: 50px;
-  height: auto;
-}
-
-.header-inner .closing-sidebar-section {
-  background-color: rgba(18, 18, 18, .2);
-  padding-left: 10px;
-  padding-right: 10px;
-  cursor: pointer;
-}
-
-.header-inner .closing-sidebar-section:hover {
-  background-color: rgba(18, 18, 18, .5);
-}
-
-.header-inner .sidebar-closing-svg svg {
-  width: 18px;
-  height: 100%;
-  color: #ffff;
-  cursor: pointer;
-  margin-left: 5px;
-  margin-right: 5px;
-  margin-bottom: 10px;
-}
-
 
 @media only screen and (max-width: 1290px) {
   .headerComponent .header-inner {

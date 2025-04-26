@@ -13,6 +13,10 @@
   justify-content: center;
 }
 
+.userComponent .user-inner .user-img{
+  z-index: -1;
+}
+
 .userComponent .user-inner .user-img img{
   max-width: 155px;
 width: 100%;
@@ -22,10 +26,19 @@ display: flex;
 justify-content: center;
 }
 
+.userComponent .user-inner .user-heading{
+  z-index: -10;
+}
+
 .userComponent .user-inner .user-heading p{
 margin-top: 25px;
 text-align: center;
 font-size: 28px;
+z-index: -10;
+}
+
+.userComponent .user-inner .main-info-heading{
+  z-index: -10;
 }
 
 .userComponent .user-inner .main-info-heading h1{
@@ -44,6 +57,7 @@ color: #242424;
     width: 100%;
     text-align: center;
     margin-top: 14px;
+    z-index: -10;
 }
 
 .user-inner .main-info-text p {
