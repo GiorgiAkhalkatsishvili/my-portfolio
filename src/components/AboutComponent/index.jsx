@@ -78,7 +78,7 @@ const AboutComponent = forwardRef((props, scrollAbout) => {
                     <h3>Projects</h3>
                   </div>
                   <div className="main-programing-skills">
-                    <p>Built numerous projects that, showcase my skills</p>
+                    <p>Built numerous projects which showcase my skills</p>
                   </div>
                 </div>
               </div>

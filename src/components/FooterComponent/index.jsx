@@ -16,7 +16,7 @@ const FooterComponent = () => {
         <hr />
         <div className="final-texts">
           <div className="final-paragraph">
-            <p>© 2025 William Mark. All rights reserved.</p>
+            <p>© 2025 George Akhalkatsishvili. All rights reserved.</p>
           </div>
           <div className="list">
             <ul>
