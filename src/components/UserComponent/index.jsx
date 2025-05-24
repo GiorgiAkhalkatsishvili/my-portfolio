@@ -1,7 +1,7 @@
 import React from 'react'
 import './UserComponent.css'
-import profileImg from '../../assets/profile.jpg'
 import { motion } from 'motion/react';
+import profileImg from '../../assets/meeee.jpg'
 
 const UserComponent = ({scrollRef, connectRef}) => {
   const scrollToSection = () => {

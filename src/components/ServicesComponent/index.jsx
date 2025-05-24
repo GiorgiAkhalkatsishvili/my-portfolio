@@ -5,6 +5,7 @@ import cssImg from '../../assets/css.jpg'
 import javascriptImg from '../../assets/js.png'
 import reactImg from '../../assets/react.webp';
 import { motion } from 'motion/react';
+import htmlIcon from '../../assets/htmlIcon.jpg'
 
 const ServicesComponent = forwardRef((props, ref) => {
   const importRef = useRef();
@@ -49,17 +50,17 @@ const ServicesComponent = forwardRef((props, ref) => {
           <div className="skillOne">
             <img src={cssImg} alt="" />
             <h3>CSS</h3>
-            <p> I have strong expertise in CSS, utilizing it to build responsive, modern web designs. I am proficient with techniques like Flexbox and CSS Grid for layout management, and I incorporate advanced styling techniques such as CSS animations and transitions to enhance user interaction. </p>
+            <p>I have strong expertise in CSS, using it to create responsive, modern web designs. I’m proficient in layout techniques like Flexbox and CSS Grid, and I apply advanced styling methods—including animations and transitions—to enhance user interaction and visual appeal.</p>
           </div>
           <div className="skillOne">
             <img src={javascriptImg} alt="" />
             <h3>JAVASCRIPT</h3>
-            <p> I have hands-on experience with JavaScript, enabling me to add interactivity and dynamic behavior to web applications. I am comfortable with DOM manipulation, event handling, and integrating APIs to create seamless user experiences.</p>
+            <p>I have solid experience with JavaScript, allowing me to implement dynamic functionality and interactivity in web applications. I'm proficient in DOM manipulation, event handling, and API integration to deliver smooth and responsive user experiences.</p>
           </div>
           <div className="skillOne">
             <img src={reactImg} alt="" />
             <h3>REACT</h3>
-            <p>I have practical knowledge of React for building component-based, scalable web applications. I am proficient with hooks, state management, and working with React Router for efficient navigation, ensuring smooth and efficient performance across web applications.</p>
+            <p>I have hands-on experience using React to build scalable, component-based web applications. I'm well-versed in hooks, state management with Redux.js, and React Router, enabling seamless navigation and consistent performance across dynamic interfaces.</p>
           </div>
         </motion.div>
       </div>

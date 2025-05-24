@@ -60,6 +60,7 @@
   width: 47px;
   background-color: #fff;
   margin: 20px 0 28px 28px;
+  mix-blend-mode: multiply;
 }
 
 .services-inner .main-skills .skillOne h3{
