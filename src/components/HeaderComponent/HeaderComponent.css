@@ -149,6 +149,11 @@
   cursor: pointer;
 }
 
+
+.header-inner .sidebar-list{
+  padding-top: 20px;
+}
+
 .header-inner .sidebar-list ul{
 text-align: center;
 display: flex;
@@ -183,6 +188,7 @@ top: 0;
   position: absolute;
   right: 0;
 }
+
 
 @media only screen and (max-width: 1290px) {
   .headerComponent .header-inner {
